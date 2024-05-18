@@ -1,0 +1,13 @@
+.slick-initialized .slick-slide {
+  transition: transform 0.5s ease-in-out;
+  transform: scale(0.95);
+}
+
+.slick-initialized .slick-active {
+  transform: scale(1);
+}
+
+.slick-slider .slick-track,
+.slick-slider .slick-list {
+  overflow: unset;
+}
