@@ -34,7 +34,7 @@ export default function Avatar({
       </div>
 
       {name && (
-        <p className="text-[10px] text-center mt-2 font-semibold">{name}</p>
+        <p className="text-[9px] text-center mt-2 font-semibold">{name}</p>
       )}
       {location && <p className="text-[7px] text-center">{location}</p>}
     </div>

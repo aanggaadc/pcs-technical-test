@@ -1,4 +1,5 @@
 import Avatar from "../avatar";
+import { onlineData } from "../../fixtures";
 
 export default function Online() {
   return (
@@ -6,14 +7,14 @@ export default function Online() {
       <h2 className="mb-3 text-sm font-semibold px-4">Online</h2>
 
       <div className="w-full rounded-[10px] shadow p-4 flex -space-x-1.5 relative">
-        {[...Array(8)].map((_, index) => (
+        {onlineData.map((data, index) => (
           <Avatar
             key={index}
             className={`w-10 h-10 z-${index + 1}`}
             isBorder
             src={`/images/avatar-example-${index + 1}.jpeg`}
-            name="John"
-            location="Sahid"
+            name={data.name}
+            location={data.location}
           />
         ))}
 

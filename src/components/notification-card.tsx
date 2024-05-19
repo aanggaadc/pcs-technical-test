@@ -1,16 +1,12 @@
 import { cn } from "../lib/utils";
-
+import { NotificationProps } from "../types";
 import { CheckIcon, ArrowRightTickIcon, CloseIcon } from "./icons";
 
 export default function NotificationCard({
   type,
   status,
   isRead,
-}: {
-  type: "reimbursement" | "sickness" | "overtime";
-  status: "rejected" | "approved" | "processed";
-  isRead?: boolean;
-}) {
+}: NotificationProps) {
   const imageMap = {
     reimbursement: "/icons/ic-coin.png",
     sickness: "/icons/ic-capsule.png",

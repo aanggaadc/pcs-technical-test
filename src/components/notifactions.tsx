@@ -1,5 +1,6 @@
 import NotificationCard from "./notification-card";
 import { ArrowLeftIcon } from "./icons";
+import { notificationData } from "../fixtures";
 
 export default function Notifications({ onClose }: { onClose: () => void }) {
   return (
@@ -14,12 +15,9 @@ export default function Notifications({ onClose }: { onClose: () => void }) {
         </h2>
       </div>
 
-      <NotificationCard type="reimbursement" status="approved" isRead />
-      <NotificationCard type="sickness" status="processed" />
-      <NotificationCard type="overtime" status="rejected" isRead />
-      <NotificationCard type="reimbursement" status="approved" isRead />
-      <NotificationCard type="sickness" status="processed" />
-      <NotificationCard type="overtime" status="rejected" isRead />
+      {notificationData.map((data, index) => (
+        <NotificationCard key={index} {...data} />
+      ))}
     </div>
   );
 }
