@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { greetBasedOnTime } from "../lib/utils";
 import Header from "../components/home/header";
 import Navbar from "../components/navbar";
 import Profile from "../components/home/profile";
@@ -24,7 +25,9 @@ export default function Home() {
       <Header onClick={() => setShowNotification(true)} />
 
       <div className="px-4">
-        <h2 className="font-poppins text-sm mb-2">Hi, Good Morning!</h2>
+        <h2 className="font-poppins text-sm mb-2">
+          Hi, Good {greetBasedOnTime()}!
+        </h2>
         <Profile />
         <Activity />
       </div>
